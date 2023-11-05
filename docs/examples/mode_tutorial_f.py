@@ -18,7 +18,7 @@ class TutorialMode(BaseMode):
 
     def handle_sounds( self, dataDicts ):
         if( self.detect('loud') ):
-            if( self.detect_inside_area(0, 0, 400, 400 ):
+            if( self.detect_inside_area(0, 0, 400, 400) ):
                 press('1')
             else:
                 press('2')
