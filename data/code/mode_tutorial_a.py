@@ -2,6 +2,7 @@ from config.config import *
 from lib.modes.base_mode import *
 import time
 
+
 class TutorialMode(BaseMode):
 
     patterns = [
@@ -15,7 +16,7 @@ class TutorialMode(BaseMode):
                 'below_frequency': 40,
             },
             'throttle': {
-                'b':0.1
+                'b': 0.1
             }
         },
         {
@@ -24,10 +25,10 @@ class TutorialMode(BaseMode):
             'threshold': {
                 'power': 270000,
                 'percentage': 85,
-                #'frequency': 40,
+                # 'frequency': 40,
             },
             'throttle': {
-                'k':0.1
+                'k': 0.1
             }
         },
         {
@@ -38,7 +39,7 @@ class TutorialMode(BaseMode):
                 'percentage': 85,
             },
             'throttle': {
-                'hi hat':0.05
+                'hi hat': 0.05
             }
         },
         {
@@ -49,18 +50,18 @@ class TutorialMode(BaseMode):
                 'percentage': 90,
             },
             'throttle': {
-                'm':0.1
+                'm': 0.1
             }
         },
     ]
 
-    def handle_sounds( self, dataDicts ):
-        if( self.detect('b')):
+    def handle_sounds(self, dataDicts):
+        if (self.detect('b')):
             self.press('b')
-        elif( self.detect('k')):
+        elif (self.detect('k')):
             self.press('k')
-        elif( self.detect('hi hat')):
+        elif (self.detect('hi hat')):
             self.press('t')
-        elif( self.detect('m')):
+        elif (self.detect('m')):
             self.press('m')
         return
